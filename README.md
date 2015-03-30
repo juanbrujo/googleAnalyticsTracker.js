@@ -47,7 +47,8 @@ If you need to track an Event or a Pageview, just change the way the data is bin
 ####Track Event:
 
 ```html
- <a href="#" data-trackevent="Arg1/Arg2/Arg3">Event</a>```
+ <a href="#" data-trackevent="Arg1/Arg2/Arg3">Event</a>
+```
 
 ###Dependencies:
 
