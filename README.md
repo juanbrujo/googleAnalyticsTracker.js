@@ -1,6 +1,6 @@
-#googleAnalyticsTracker.js
+#GoogleAnalyticsTracker.js
 
-Javascript that makes easy add **Google Analytics** tracks for *Events* & *Pageviews*.
+Easily track **Events & Pageviews** with *Google Analytics*.
 
 ---
 
@@ -30,30 +30,36 @@ or the new one (`ga`):
  ga('send', 'pageview');
  ```
 
-- Call this function:
+- Call this script:
 
 ``` html
 <script src="../googleAnalyticsTracker.js"></script>
 ```
  
-If you need to track an Event or a Pageview, just change the way the data is binded to the element (link, button):
+If you need to track an Event or a Pageview, just change the way the data is binded to the element (link, button) using the `data` attribute:
 
-####Track Pageview:
+####Track Pageview: *data-trackpageview=""*
 
 ```html
 <a href="#" data-trackpageview="Pageview.html">Pageview</a>
 ```
 
-####Track Event:
+####Track Event: *data-trackevent=""*
 
 ```html
  <a href="#" data-trackevent="Arg1/Arg2/Arg3">Event</a>
 ```
 
-###Dependencies:
+### Test:
+
+To test it, I recommend you to download the Chrome Extension [GA Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) and run it on your localhost. Open the console and click the tracked buttons / links, you'll see what's being sent to Google:
+
+`Running command: ga("send", "event", "Zone", "Element", "Event")`
+
+### Dependencies:
 
 - None, vanilla JavaScript.
 
-###Thanks:
+### Thanks:
 To my mentor `@LordTeluco` and his awesome [functions_mark.js](https://github.com/jmelgarejo/simple_analytics_mark/blob/master/assets/js/functions_mark.js)
 
