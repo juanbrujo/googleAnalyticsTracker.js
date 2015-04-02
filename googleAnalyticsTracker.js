@@ -1,6 +1,14 @@
+/**
+ * GoogleAnalyticsTracker.js
+ * Easily track Events & Pageviews with Google Analytics.
+ *
+ * https://github.com/juanbrujo/googleAnalyticsTracker.js
+ * @2015 Jorge Epuñan | @csslab | CSSLab.cl
+ * License: MIT
+**/
 window.onload = function () {
 	var trackEvent = document.querySelectorAll("[data-trackevent]"),
-			trackPage = document.querySelectorAll("[data-trackpageview]");
+	trackPage = document.querySelectorAll("[data-trackpageview]");
 
 	// if is TrackEvent
 	if (trackEvent.length > 0) {
@@ -14,13 +22,13 @@ window.onload = function () {
 				var tag = data.split("/");
 
 				// check for ga
-				if (typeof ga !== 'undefined') {
-					ga('send', 'event', tag[0], tag[1], tag[2]);
+				if (typeof ga !== "undefined") {
+					ga("send", "event", tag[0], tag[1], tag[2]);
 				}
 
 				// check for _gaq
-				if (typeof _gaq !== 'undefined') {
-					_gaq.push(['_trackEvent', tag[0], tag[1], tag[2]]);
+				if (typeof _gaq !== "undefined") {
+					_gaq.push(["_trackEvent", tag[0], tag[1], tag[2]]);
 				}
 
 			}); // end addEventListener
@@ -39,13 +47,13 @@ window.onload = function () {
 				var tag = this.dataset.trackpageview;
 
 				// check for ga
-				if (typeof ga !== 'undefined') {
-					ga('send', 'pageview', tag);
+				if (typeof ga !== "undefined") {
+					ga("send", "pageview", tag);
 				}
 
 				// check for _gaq
-				if (typeof _gaq !== 'undefined') {
-					_gaq.push(['_trackPageview', tag]);
+				if (typeof _gaq !== "undefined") {
+					_gaq.push(["_trackPageview", tag]);
 				}
 
 			}); // end addEventListener
